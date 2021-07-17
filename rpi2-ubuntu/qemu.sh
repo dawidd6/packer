@@ -1,9 +1,11 @@
-qemu-system-arm \
-    -M raspi2 \
-    -kernel /media/$USER/system-boot/vmlinuz \
-    -initrd /media/$USER/system-boot/initrd.img \
-    -drive media=disk,format=raw,file=rpi2-ubuntu-20.04.img \
-    -append "fsck.repair=yes net.ifnames=0 dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait" \
-    -dtb /media/$USER/system-boot/bcm2710-rpi-3-b.dtb \
-    -serial stdio \
-    -display none
+emu-system-arm \
+              -kernel ~/vmlinuz-5.4.0-1028-raspi \
+              -initrd ~/initrd.img-5.4.0-1028-raspi \
+              -append "console=ttyAMA0,115200 root=/dev/mmcblk0p2" \
+              -no-reboot \
+              -display none \
+              -m 1024 \
+              -M raspi2 \
+              -drive format=raw,file=$HOME/github/dawidd6/packer/rpi2-ubuntu/ubuntu-20.04.2-preinstalled-server-armhf+raspi.img \
+              -serial stdio \
+              -dtb ~/bcm2709-rpi-2-b.dtb
