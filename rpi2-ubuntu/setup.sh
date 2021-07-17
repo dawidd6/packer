@@ -15,6 +15,6 @@ echo deb http://pkg.jenkins-ci.org/debian binary/ | tee /etc/apt/sources.list.d/
 
 # Packages installation/removal
 apt-get update
-apt-get install -y docker.io jenkins openjdk-11-jdk-headless
 apt-get remove -y --purge snapd
-apt-get autoremove --purge
+apt-get autoremove -y --purge
+apt-get install -y docker.io jenkins openjdk-11-jdk-headless
