@@ -1,4 +1,4 @@
-#cloud-init
+#cloud-config
 
 ssh_pwauth: false
 ssh_import_id:
