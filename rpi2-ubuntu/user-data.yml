@@ -4,4 +4,6 @@ ssh_pwauth: false
 ssh_import_id:
   - gh:dawidd6
 
+fqdn: rpi2
 hostname: rpi2
+manage_etc_hosts: localhost
