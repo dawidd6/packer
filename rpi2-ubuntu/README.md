@@ -5,6 +5,7 @@
 sudo apt install qemu-user-static kpartx
 go get github.com/hashicorp/packer@v1.7.2
 go get github.com/solo-io/packer-builder-arm-image@master
+go get github.com/mkaczanowski/packer-builder-arm@master
 
 # Build image
 sudo packer build template.json
