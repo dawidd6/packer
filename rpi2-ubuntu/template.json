@@ -18,8 +18,8 @@
     },
     {
       "type": "file",
-      "source": "100-cloud-init-ssh.cfg",
-      "destination": "/etc/cloud/cloud.cfg.d/"
+      "source": "user-data.yml",
+      "destination": "/boot/firmware/user-data"
     },
     {
       "type": "shell",

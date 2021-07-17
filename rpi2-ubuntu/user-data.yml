@@ -1,0 +1,7 @@
+#cloud-init
+
+ssh_pwauth: false
+ssh_import_id:
+  - gh:dawidd6
+
+hostname: rpi2
